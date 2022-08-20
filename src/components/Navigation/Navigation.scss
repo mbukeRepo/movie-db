@@ -1,0 +1,10 @@
+@use '../../utils/variables' as v;
+
+$logoColor: #e50914;
+
+.main-navigation {
+  background: v.$navBackColor;
+  &-logo {
+    color: $logoColor;
+  }
+}
