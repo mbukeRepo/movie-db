@@ -10,17 +10,17 @@ export default function Navigation() {
     <div className='main-navigation'>
         <p className='main-navigation-logo'>MovieDB</p>
         <ul className="main-navigation-list">
-            <li className="main-navigation__list-item"> 
+            <li className="main-navigation-list-item"> 
               <Link to={"/movies"}> 
                 <VideocamTwoToneIcon/> <span> Movies</span> 
               </Link>
             </li>
-            <li className="main-navigation__list-item"> 
+            <li className="main-navigation-list-item"> 
               <Link to={"/tv-shows"}>
                 <LiveTvTwoToneIcon/> <span> Tv Shows</span>  
               </Link>
             </li>
-            <li className="main-navigation__list-item"> 
+            <li className="main-navigation-list-item"> 
               <Link to={"/search"}>
                   <SearchTwoToneIcon/> <span> Search</span>
               </Link>

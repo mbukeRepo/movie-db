@@ -1,3 +1,12 @@
 $textColor: #f3f3f3;
 $mainBackColor: #181818;
 $navBackColor: #000;
+@mixin linkStyles {
+  text-decoration: none;
+  color: inherit;
+}
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

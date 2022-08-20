@@ -1,15 +1,10 @@
 @use '../../utils/variables' as v;
 
 $logoColor: #e50914;
-@mixin flexRow {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
 
 .main-navigation {
   background: v.$navBackColor;
-  @include flexRow;
+  @include v.flexRow;
   position: fixed;
   top: 0;
   left: 0;
@@ -20,29 +15,28 @@ $logoColor: #e50914;
     margin-left: 0.5rem;
   }
   &-list {
-    @include flexRow;
+    @include v.flexRow;
     list-style: none;
     color: v.$textColor;
-  }
-  &__list-item {
-    a {
-      text-decoration: none;
-      color: inherit;
-      @include flexRow();
-      padding: 0.5rem;
-    }
+    &-item {
+      a {
+        @include v.linkStyles;
+        @include v.flexRow();
+        padding: 0.5rem;
+      }
 
-    span {
-      margin-left: 0.3rem;
-    }
-    &:hover {
-      background-color: $logoColor;
-      color: black;
-      border-radius: 15px;
-      cursor: pointer;
-    }
-    &:active {
-      color: #e50914;
+      span {
+        margin-left: 0.3rem;
+      }
+      &:hover {
+        background-color: $logoColor;
+        color: black;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+      &:active {
+        color: #e50914;
+      }
     }
   }
 }

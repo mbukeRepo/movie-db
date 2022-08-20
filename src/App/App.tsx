@@ -6,9 +6,13 @@ import TvShow from "../TvShows/TvShow";
 import TvShows from "../TvShows/TvShows";
 import Navigation from "../components/Navigation/Navigation";
 import "./App.scss";
+import { useEffect } from "react";
 
 
 const App = () => {
+    useEffect(() => {
+        document.title = "movieDB";
+    }, []);
     return(
         <div>
             <Navigation/>
