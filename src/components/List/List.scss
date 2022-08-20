@@ -1,6 +1,9 @@
 @use '../../utils/variables' as v;
 .movie-list {
   @include v.flexRow;
+}
+#movie_container {
+  @include v.flexRow;
   //   flex-wrap: wrap;
   overflow-x: scroll;
   margin: auto;
