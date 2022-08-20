@@ -1,0 +1,11 @@
+@use '../../utils/variables' as v;
+.movie-list {
+  @include v.flexRow;
+  //   flex-wrap: wrap;
+  overflow-x: scroll;
+  margin: auto;
+  width: 100%;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
