@@ -25,10 +25,24 @@ $logoColor: #e50914;
     color: v.$textColor;
   }
   &__list-item {
-    @include flexRow();
-    padding: 0.5rem;
+    a {
+      text-decoration: none;
+      color: inherit;
+      @include flexRow();
+      padding: 0.5rem;
+    }
+
     span {
       margin-left: 0.3rem;
+    }
+    &:hover {
+      background-color: $logoColor;
+      color: black;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+    &:active {
+      color: #e50914;
     }
   }
 }
