@@ -54,11 +54,11 @@ const Movies = () => {
           <>
              <div className="list">
                 <p className="list__title">Popular movies</p>
-                <List movies={popular}/>
+                <List items={popular}/>
              </div>
              <div className="list">
                 <p className="list__title">Top Rated movies</p>
-                <List movies={topRated}/>
+                <List items={topRated}/>
              </div>
           </>
       }
