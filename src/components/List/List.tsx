@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Card from "../Card/Card";
 import {SimpleMovie as Movie} from "../../Interfaces/Movie";
+import {SimpleShow as Show} from "../../Interfaces/Show";
 import "./List.scss";
 import ArrowBackIosNewTwoToneIcon from '@mui/icons-material/ArrowBackIosNewTwoTone';
 import ArrowForwardIosTwoToneIcon from '@mui/icons-material/ArrowForwardIosTwoTone';
 
-function List({movies}: {movies: Movie[]}) {
+function List({items}: {items: Movie[] | Show[]}) {
   const [maxScrollPosition, setMaxScrollPosition] = useState(0);
   const [scrollPos, setScrollPos] = useState(0);
   const ref = useRef<any| undefined>();
@@ -47,8 +48,8 @@ function List({movies}: {movies: Movie[]}) {
         
         <div id="movie_container" ref={ref}>
             {
-                movies.map((movie: Movie) => (
-                    <Card movie={movie} key={movie.id}/>
+                items.map((item: Movie | Show) => (
+                    <Card item={item} key={item.id}/>
                 ))
             }
         </div>

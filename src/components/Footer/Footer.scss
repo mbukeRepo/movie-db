@@ -10,7 +10,8 @@
   //   margin-top: 23px;
   flex-shrink: 0;
   height: 100%;
-  padding: 1.3rem;
+  padding: 0.8rem;
+  max-height: 100px;
   &__title {
     display: flex;
     flex-direction: row;
