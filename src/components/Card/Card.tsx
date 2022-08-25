@@ -1,10 +1,10 @@
 import React from 'react'
 import {SimpleMovie as Movie} from "../../Interfaces/Movie";
-import {SimpleShow as Show} from "../../Interfaces/Show";
+// import {SimpleShow as Show} from "../../Interfaces/Show";
 import {Link} from "react-router-dom";
 import TheatersIcon from '@mui/icons-material/Theaters';
 import "./Card.scss";
- function Card({item}: {item: Movie | Show}) {
+ function Card({item}: {item: Movie | any}) {
   
   return (
     <Link to={"/#"}  className="movie">
