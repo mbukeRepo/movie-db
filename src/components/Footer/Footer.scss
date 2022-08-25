@@ -1,0 +1,20 @@
+@use '../../utils/variables' as v;
+.red {
+  color: rgb(226, 23, 23);
+  margin: 2px;
+}
+.footer {
+  color: v.$textColor;
+  width: 100%;
+  background-color: v.$navBackColor;
+  //   margin-top: 23px;
+  flex-shrink: 0;
+  height: 100%;
+  padding: 1.3rem;
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
