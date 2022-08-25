@@ -1,7 +1,9 @@
 @use '../utils/_variables' as v;
 
-main {
+.container {
   background-color: v.$mainBackColor;
   color: v.$textColor;
   margin-top: 100px;
+  padding: 1.7rem;
+  flex: 1 0 auto;
 }

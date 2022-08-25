@@ -5,9 +5,17 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
   padding: 0;
   background-color: v.$mainBackColor;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
 }
