@@ -39,7 +39,7 @@ function List({movies}: {movies: Movie[]}) {
     <div className='movie-list'>
         {
             scrollPos > 0 ?
-                <div className="movie-list-left-ctl" onClick={scrollLeft}>
+                <div className="movie-list-ctl" onClick={scrollLeft}>
                     <ArrowBackIosNewTwoToneIcon/>
                 </div>
                 : null
@@ -52,7 +52,7 @@ function List({movies}: {movies: Movie[]}) {
                 ))
             }
         </div>
-        <div className="movie-list-left-ctl" onClick={scrollRight}>
+        <div className="movie-list-ctl" onClick={scrollRight}>
             {
                 (scrollPos === 0) || (maxScrollPosition > Math.ceil(scrollPos)) ?
                 <ArrowForwardIosTwoToneIcon/>
