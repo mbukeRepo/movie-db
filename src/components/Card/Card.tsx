@@ -1,14 +1,22 @@
 import React from 'react'
 import {SimpleMovie as Movie} from "../../Interfaces/Movie";
+import {SimpleShow as Show} from "../../Interfaces/Show";
 import {Link} from "react-router-dom";
+import TheatersIcon from '@mui/icons-material/Theaters';
 import "./Card.scss";
- function Card({movie}: {movie: Movie}) {
+ function Card({item}: {item: Movie | Show}) {
+  
   return (
     <Link to={"/#"}  className="movie">
         <div className="movie-image">
-            <img src={"https://image.tmdb.org/t/p/w500" + movie.backdrop_path} alt=""/>
+           {
+             item.backdrop_path ? 
+              (<img src={"https://image.tmdb.org/t/p/w500" + item.backdrop_path} alt=""/>): 
+                  <TheatersIcon className="movie-image-backup"/>
+           }
+            
         </div>
-        <p className="movie-title">{movie.title}</p>
+        <p className="movie-title">{item.title || item.name}</p>
     </Link>
   )
 }
