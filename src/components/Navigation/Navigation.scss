@@ -1,7 +1,5 @@
 @use '../../utils/variables' as v;
 
-$logoColor: #e50914;
-
 .main-navigation {
   background: v.$navBackColor;
   @include v.flexRow;
@@ -11,7 +9,7 @@ $logoColor: #e50914;
   width: 100%;
 
   &-logo {
-    color: $logoColor;
+    color: v.$logoColor;
     margin-left: 0.5rem;
   }
   &-list {
@@ -29,9 +27,10 @@ $logoColor: #e50914;
         margin-left: 0.3rem;
       }
       &:hover {
-        background-color: $logoColor;
-        color: black;
-        border-radius: 15px;
+        background-color: v.$mainBackColor;
+        // color: black;
+        // border-radius: 15px;
+        border-bottom: 2px solid #e50914;
         cursor: pointer;
       }
       &:active {
