@@ -1,6 +1,10 @@
 @use '../../utils/variables' as v;
 .movie-list {
   @include v.flexRow;
+  &-ctl {
+    cursor: pointer;
+    color: v.$logoColor;
+  }
 }
 #movie_container {
   @include v.flexRow;
