@@ -1,0 +1,49 @@
+@use '../utils/variables' as v;
+.movie-details {
+  margin: auto;
+  &-title {
+    // font-weight: 600;
+    font-size: 1.5rem;
+  }
+  &-genres {
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-around;
+    span {
+      //   margin: 0 12px;
+      //   background-color: ;
+    }
+  }
+  &-release-date {
+    font-size: 0.9rem;
+  }
+  &-poster {
+    height: auto;
+    width: 50%;
+    margin: auto;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &-description {
+    &-genres {
+      @include v.flexRow();
+      p {
+        padding: 0.3rem;
+        border: 2px solid v.$textColor;
+        margin: 0.2rem;
+        border-radius: 25px;
+      }
+    }
+    .read-all {
+      color: rgb(59, 59, 230);
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) {
+}
