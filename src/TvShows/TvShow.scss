@@ -1,0 +1,73 @@
+@use '../utils/variables' as v;
+.show-details {
+  margin: auto;
+  &-title {
+    // font-weight: 600;
+    font-size: 1.5rem;
+  }
+  &-genres {
+    display: flex;
+    flex-direction: row;
+  }
+  &-release-date {
+    font-size: 0.9rem;
+  }
+  &-poster {
+    height: auto;
+    width: 50%;
+    margin: auto;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &-description {
+    &-genres {
+      @include v.flex('row');
+      p {
+        padding: 0.3rem;
+        border: 2px solid v.$textColor;
+        margin: 0.2rem;
+        border-radius: 25px;
+      }
+    }
+    .read-all {
+      color: v.$logoColor;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.desktop {
+  display: none;
+}
+@media (min-width: 500px) {
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+  .show-details {
+    height: 100%;
+    width: 67%;
+    margin: auto;
+    align-items: flex-start !important;
+    @include v.flex('row');
+    justify-content: center;
+    &-poster {
+      margin: 0;
+    }
+    &-description {
+      margin-left: 1.2rem;
+      width: 75%;
+    }
+    .read-all {
+      display: none;
+    }
+    .the-rest {
+      display: inline;
+    }
+  }
+}

@@ -8,7 +8,7 @@ import Loading from "../components/Loading/Loading";
 
 
 
-const Movies = () => {
+const Shows = () => {
   const [popular, setPopular] = useState<Show[]>([]);
   const [topRated, setTopRated] = useState<Show[]>([]);
   // const [topRated, setTopRated] = useState<Movie[]>();
@@ -55,11 +55,11 @@ const Movies = () => {
           <>
              <div className="list">
                 <p className="list__title">Popular tv shows</p>
-                <List items={popular}/>
+                <List items={popular} isMovie={false}/>
              </div>
              <div className="list">
                 <p className="list__title">Top Rated tv shows</p>
-                <List items={topRated}/>
+                <List items={topRated} isMovie={false}/>
              </div>
           </>
       }
@@ -67,4 +67,4 @@ const Movies = () => {
     </div>
   )
 }
-export default Movies;
+export default Shows;
