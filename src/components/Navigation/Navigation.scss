@@ -1,7 +1,7 @@
 @use '../../utils/variables' as v;
 .main-navigation {
   background: v.$navBackColor;
-  @include v.flexRow;
+  @include v.flex('row');
   position: fixed;
   bottom: 0;
   left: 0;
@@ -11,7 +11,7 @@
     display: none;
   }
   &-list {
-    @include v.flexRow;
+    @include v.flex('row');
     list-style: none;
     color: v.$textColor;
     justify-content: center;
@@ -20,10 +20,8 @@
     &-item {
       a {
         @include v.linkStyles;
-        display: flex;
-        flex-direction: column;
+        @include v.flex('row');
         justify-content: center;
-        align-items: center;
         padding: 0.5rem;
       }
 
@@ -59,7 +57,7 @@
 @media only screen and (min-width: 500px) {
   .main-navigation {
     background: v.$navBackColor;
-    @include v.flexRow;
+    @include v.flex('row');
     position: initial;
     // position: fixed;
     // top: 0;
@@ -73,13 +71,14 @@
       display: block;
     }
     &-list {
-      @include v.flexRow;
+      @include v.flex('row');
       list-style: none;
       color: v.$textColor;
+      margin-left: 1.3rem;
       &-item {
         a {
           @include v.linkStyles;
-          @include v.flexRow();
+          @include v.flex('row');
           padding: 0.5rem;
         }
 

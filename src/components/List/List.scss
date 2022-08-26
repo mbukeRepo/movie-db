@@ -1,13 +1,13 @@
 @use '../../utils/variables' as v;
 .movie-list {
-  @include v.flexRow;
+  @include v.flex('row');
   &-ctl {
     cursor: pointer;
     color: v.$logoColor;
   }
 }
 #movie_container {
-  @include v.flexRow;
+  @include v.flex('row');
   //   flex-wrap: wrap;
   overflow-x: scroll;
   margin: auto;

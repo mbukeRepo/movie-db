@@ -6,8 +6,8 @@ $logoColor: #e50914;
   text-decoration: none;
   color: inherit;
 }
-@mixin flexRow {
+@mixin flex($direction) {
   display: flex;
-  flex-direction: row;
+  flex-direction: $direction;
   align-items: center;
 }

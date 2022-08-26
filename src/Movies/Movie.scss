@@ -8,11 +8,6 @@
   &-genres {
     display: flex;
     flex-direction: row;
-    // justify-content: space-around;
-    span {
-      //   margin: 0 12px;
-      //   background-color: ;
-    }
   }
   &-release-date {
     font-size: 0.9rem;
@@ -28,7 +23,7 @@
   }
   &-description {
     &-genres {
-      @include v.flexRow();
+      @include v.flex('row');
       p {
         padding: 0.3rem;
         border: 2px solid v.$textColor;

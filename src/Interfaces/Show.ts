@@ -13,7 +13,7 @@ export interface Season {
 }
 
 export interface CompoundShow extends SimpleShow{
-    genres: {name: string};
+    genres: {name: string}[];
     in_production: boolean;
     number_of_seasons: number;
     seasons: Season[]

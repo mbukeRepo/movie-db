@@ -9,9 +9,8 @@
     // height: 50px;
     min-height: 172px;
     background-color: black;
-    display: flex;
+    @include v.flex('row');
     justify-content: center;
-    align-items: center;
     img {
       width: 100%;
       border-radius: 5px;

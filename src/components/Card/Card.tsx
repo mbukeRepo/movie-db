@@ -7,7 +7,7 @@ import "./Card.scss";
  function Card({item}: {item: Movie | any}) {
   
   return (
-    <Link to={"/#"}  className="movie">
+    <Link to={"/movies/" + item.id }  className="movie">
         <div className="movie-image">
            {
              item.backdrop_path ? 

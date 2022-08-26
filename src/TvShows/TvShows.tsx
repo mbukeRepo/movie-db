@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import List from "../components/List/List";
 import {SimpleShow as Show} from "../Interfaces/Show";
+import Loading from "../components/Loading/Loading";
 
 
 
@@ -49,8 +50,8 @@ const Movies = () => {
   return (
     <div>
       {
-        (!popular && !topRated) ? 
-          <p>Loading</p>: 
+        (!popular || !topRated) ? 
+          <Loading/>: 
           <>
              <div className="list">
                 <p className="list__title">Popular tv shows</p>

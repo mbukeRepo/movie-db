@@ -7,7 +7,9 @@ export interface SimpleMovie{
 
 export interface CompoundMovie extends SimpleMovie {
     originalLanguage: string;
-    releaseDate: string;
+    release_date: string;
     adult: boolean;
-    genres: {name: string};
+    genres: {name: string}[];
+    overview: string;
+    poster_path: string;
 }
