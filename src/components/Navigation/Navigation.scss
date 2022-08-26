@@ -1,30 +1,34 @@
 @use '../../utils/variables' as v;
-
 .main-navigation {
   background: v.$navBackColor;
   @include v.flexRow;
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
 
   &-logo {
-    color: v.$logoColor;
-    margin-left: 0.5rem;
+    display: none;
   }
   &-list {
     @include v.flexRow;
     list-style: none;
     color: v.$textColor;
+    justify-content: center;
+    margin: auto;
+    padding-left: 0;
     &-item {
       a {
         @include v.linkStyles;
-        @include v.flexRow();
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         padding: 0.5rem;
       }
 
       span {
-        margin-left: 0.3rem;
+        display: none;
       }
       &:hover {
         background-color: v.$mainBackColor;
@@ -37,5 +41,66 @@
         color: #e50914;
       }
     }
+  }
+}
+
+.main-navigation-mobile {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: v.$navBackColor;
+  &-logo {
+    color: v.$logoColor;
+    margin-left: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .main-navigation {
+    background: v.$navBackColor;
+    @include v.flexRow;
+    position: initial;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // bottom: none;
+    width: 100%;
+
+    &-logo {
+      color: v.$logoColor;
+      margin-left: 0.5rem;
+      display: block;
+    }
+    &-list {
+      @include v.flexRow;
+      list-style: none;
+      color: v.$textColor;
+      &-item {
+        a {
+          @include v.linkStyles;
+          @include v.flexRow();
+          padding: 0.5rem;
+        }
+
+        span {
+          margin-left: 0.3rem;
+          display: block;
+        }
+        &:hover {
+          background-color: v.$mainBackColor;
+          color: v.$logoColor;
+          // border-radius: 15px;
+          border-bottom: 2px solid #e50914;
+          cursor: pointer;
+        }
+        &:active {
+          color: #e50914;
+        }
+      }
+    }
+  }
+  .main-navigation-mobile {
+    display: none;
   }
 }
