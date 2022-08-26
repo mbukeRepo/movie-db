@@ -1,0 +1,60 @@
+@use '../utils/variables' as v;
+.search-container {
+  margin: 2rem auto auto auto;
+  flex-direction: column !important;
+  .search-box {
+    @include v.flex('row');
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.3rem;
+    background-color: rgb(2, 2, 2);
+    border-radius: 1.3rem;
+    &-input {
+      background-color: rgb(37, 37, 37);
+      @include v.flex('row');
+      border-radius: 1.2rem;
+      padding: 0.6rem;
+      input {
+        background-color: inherit;
+        border: none;
+        outline: none;
+        color: v.$textColor;
+      }
+    }
+    ul {
+      list-style: none;
+      li {
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .search-selection {
+    margin-top: 0.3rem;
+    @include v.flex('row');
+    justify-content: center;
+    margin-left: 1.2rem;
+    &-option {
+      padding: 0.4rem;
+      border-radius: 0.6rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .search-container {
+    @include v.flex('column');
+    justify-content: center;
+    flex-direction: column !important;
+    .search-box {
+      flex-direction: row;
+    }
+    .search-selection {
+      margin-top: 0;
+    }
+  }
+}
